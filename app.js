@@ -11,19 +11,19 @@ function getHumanChoice(){
     return prompt("enter rock, paper or scissor", "");
 }
 
-function playRound(humanChoice,ComputerChoice){
+function playRound(humanChoice,computerChoice){
     humanChoice.toLowerCase();
 
-    if (humanChoice === "rock" && ComputerChoice === "scissor") {
+    if (humanChoice === "rock" && computerChoice === "scissor") {
         console.log("computer lose!, human wins!");
         humanScore++;
-    } else if(humanChoice === "paper" && ComputerChoice === "rock"){
+    } else if(humanChoice === "paper" && computerChoice === "rock"){
         console.log("computer lose!, human wins!");
         humanScore++;
-    } else if(humanChoice === "scissor" && ComputerChoice === "paper"){
+    } else if(humanChoice === "scissor" && computerChoice === "paper"){
         console.log("computer lose!, human wins!");
         humanScore++;
-    } else if(humanChoice === ComputerChoice){
+    } else if(humanChoice === computerChoice){
         console.log("tie! no one wins!");
     } else {
         console.log("humans lose! computer wins!");
@@ -36,12 +36,12 @@ function playGame(){
 
     for(let i = 0; i < exit; i++){
         const humanChoice = getHumanChoice();
-        const ComputerChoice = getComputerChoice();
+        const computerChoice = getComputerChoice();
 
         console.log("human choice :", humanChoice);
-        console.log("computer choice :", ComputerChoice);
+        console.log("computer choice :", computerChoice);
 
-        playRound(humanChoice, ComputerChoice);
+        playRound(humanChoice, computerChoice);
 
         if (humanScore === 5) {
             exit = 0;
